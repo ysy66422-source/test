@@ -1,104 +1,99 @@
-/* eslint-disable @next/next/no-img-element -- Figma MCP assets; expiring remote URLs */
+/* eslint-disable @next/next/no-img-element -- Figma MCP assets */
 
 import Link from "next/link";
 
 const imgBlockLayer =
-  "https://www.figma.com/api/mcp/asset/85e24822-499f-4aac-8c2e-daea24deb057";
-const imgBackIcon =
-  "https://www.figma.com/api/mcp/asset/96ec9fbf-d534-4ffe-b438-80f23139c682";
+  "https://www.figma.com/api/mcp/asset/8833ec73-5588-4ed1-9c42-e3da431a4da2";
 const imgStatusBar =
-  "https://www.figma.com/api/mcp/asset/051e5a8a-c2f8-4ccb-af95-4d8ab7e11975";
+  "https://www.figma.com/api/mcp/asset/79bd19ee-5638-46c1-8829-7c7d4fbfc464";
+const imgBackIcon =
+  "https://www.figma.com/api/mcp/asset/5e49976e-b22c-4c30-9835-dab4abfb186e";
 
 export function SimpleLoginEmpty() {
   return (
-    /* 390×844 iPhone frame */
+    /* 반응형 — 고정 너비 제거, flex 컬럼 흐름 레이아웃 */
     <div
-      className="relative mx-auto overflow-hidden bg-[#f6f7fb]"
-      style={{ width: 390, minHeight: 844, fontFamily: "Pretendard, sans-serif" }}
+      className="flex min-h-screen w-full items-start bg-[#f6f7fb]"
+      style={{ fontFamily: "Pretendard, sans-serif" }}
     >
-      {/* ────────────────────────────────────────
-          iOS Status Bar
-      ──────────────────────────────────────── */}
-      <div className="pointer-events-none absolute left-0 top-0 h-[41px] w-full">
-        <img
-          alt=""
-          src={imgStatusBar}
-          className="absolute inset-0 block h-full w-full max-w-none object-cover"
-        />
-      </div>
+      <div className="flex w-full flex-1 flex-col items-center gap-3">
 
-      {/* ────────────────────────────────────────
-          Navigation Header  (top: 43px, h: 48px)
-      ──────────────────────────────────────── */}
-      <div className="absolute left-0 top-[43px] flex h-[48px] w-full items-center justify-between px-4">
-        {/* 뒤로 가기 → 등록된 계정 목록 (Figma 1375:39962) */}
-        <Link
-          href="/simple-login/accounts"
-          aria-label="뒤로 가기"
-          className="flex h-8 w-8 items-center justify-center"
-        >
-          <img
-            alt=""
-            src={imgBackIcon}
-            className="block h-[17px] w-[21px] max-w-none"
-          />
-        </Link>
-
-        {/* 타이틀 */}
-        <p className="text-[18px] font-bold leading-normal text-[#222]">
-          간편 로그인
-        </p>
-
-        {/* 우측 여백 (가운데 정렬 유지용) */}
-        <div className="h-8 w-8" aria-hidden="true" />
-      </div>
-
-      {/* ────────────────────────────────────────
-          Tab Bar  (top: 115px)
-      ──────────────────────────────────────── */}
-      <div className="absolute left-0 top-[115px] w-full px-6">
-        <div className="flex items-center gap-5 pb-4">
-          {/* 전체 사이트 — inactive */}
-          <button
-            type="button"
-            className="text-[16px] font-bold leading-normal text-[#959595]"
-          >
-            전체 사이트
-          </button>
-
-          {/* 등록된 계정 — active (밑줄 인디케이터) */}
-          <div className="relative">
-            <button
-              type="button"
-              className="text-[16px] font-bold leading-normal text-[#222]"
-            >
-              등록된 계정
-            </button>
-            <span className="absolute -bottom-[1px] left-0 h-[2px] w-full rounded-full bg-[#222]" />
+        {/* ── Status Bar ── */}
+        <div className="w-full shrink-0">
+          <div className="relative h-[41px] w-full">
+            <img
+              alt=""
+              src={imgStatusBar}
+              className="absolute inset-0 block h-full w-full max-w-none object-cover"
+            />
           </div>
         </div>
 
-        {/* ──────────────────────────────────────
-            Empty-state Card
-        ────────────────────────────────────── */}
-        <div className="w-full rounded-[16px] bg-white py-[34px]">
-          <div className="flex flex-col items-center gap-[7px]">
-            {/* 일러스트 */}
+        {/* ── Navigation Header ── */}
+        <div className="flex h-[48px] w-full shrink-0 items-center justify-between px-4">
+          <Link
+            href="/simple-login/accounts"
+            aria-label="뒤로 가기"
+            className="flex h-8 w-8 items-center justify-center"
+          >
             <img
-              alt="등록된 계정 없음"
-              src={imgBlockLayer}
-              className="block h-[122px] w-[122px] max-w-none"
+              alt=""
+              src={imgBackIcon}
+              className="block h-[17px] w-[21px] max-w-none"
             />
+          </Link>
 
-            {/* 설명 텍스트 */}
-            <p className="text-center text-[16px] font-normal leading-[1.4] text-[#222]">
-              등록한 계정이 없습니다.&nbsp;
-              <br />
-              자주 이용하시는 사이트의 계정을
-              <br />
-              등록하고 간편하게 로그인해보세요.
-            </p>
+          <p className="text-[18px] font-bold leading-normal text-[#222]">
+            간편 로그인
+          </p>
+
+          {/* 우측 여백 — 타이틀 가운데 정렬 유지 */}
+          <div className="h-8 w-8" aria-hidden="true" />
+        </div>
+
+        {/* ── Tab Bar + 콘텐츠 ── */}
+        <div className="flex w-full shrink-0 flex-col items-start px-6">
+
+          {/* 탭 */}
+          <div className="flex w-full items-center gap-5 pb-4">
+            <button
+              type="button"
+              className="text-[16px] font-bold leading-normal text-[#959595]"
+            >
+              전체 사이트
+            </button>
+            <div className="relative">
+              <button
+                type="button"
+                className="text-[16px] font-bold leading-normal text-[#222]"
+              >
+                등록된 계정
+              </button>
+              <span className="absolute -bottom-[1px] left-0 h-[2px] w-full rounded-full bg-[#222]" />
+            </div>
           </div>
+
+          {/* Empty-state Card */}
+          <div className="w-full rounded-[16px] bg-white py-[34px]">
+            <div className="flex flex-col items-center gap-[7px]">
+              {/* 일러스트 — 페이드인 */}
+              <img
+                alt="등록된 계정 없음"
+                src={imgBlockLayer}
+                className="block h-[122px] w-[122px] max-w-none animate-fade-in opacity-0"
+              />
+
+              {/* 안내 텍스트 */}
+              <p className="text-center text-[16px] font-normal leading-[1.4] text-[#222]">
+                등록한 계정이 없습니다.{" "}
+                <br />
+                자주 이용하시는 사이트의 계정을
+                <br />
+                등록하고 간편하게 로그인해보세요.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

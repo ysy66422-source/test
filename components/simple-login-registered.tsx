@@ -2,63 +2,76 @@
 
 import Link from "next/link";
 
-// ─── Status Bar ──────────────────────────────────────────────────────────────
-const imgStatusBar =
-  "https://www.figma.com/api/mcp/asset/797be8f8-1709-422d-8bc8-08dd38a51d7c";
+// ─── Status Bar ───────────────────────────────────────────────────────────────
+const imgTop =
+  "https://www.figma.com/api/mcp/asset/a953d1bc-30cb-4365-8008-59af17ec0a1a";
 
-// ─── Navigation Header ───────────────────────────────────────────────────────
-const imgBackIcon =
-  "https://www.figma.com/api/mcp/asset/890f20f4-83fa-4717-b4cc-e7c0918c6b7e";
-const imgSearch =
-  "https://www.figma.com/api/mcp/asset/c4eadf1a-fa74-43fe-be20-345b2c7aac5d";
+// ─── Navigation Header ────────────────────────────────────────────────────────
+const imgIcon32GnbBack =
+  "https://www.figma.com/api/mcp/asset/e2e0ddc7-ca00-42d9-b073-25f2d65af4f8";
+const imgIcon32GnbBack1 =
+  "https://www.figma.com/api/mcp/asset/76c4acc6-44f9-440f-ba05-0765a9429fa4";
+const imgIcon32GnbSearch =
+  "https://www.figma.com/api/mcp/asset/92790d7a-ba64-4bf6-ad46-4fd05dc7fbfc";
 
-// ─── Site Row ────────────────────────────────────────────────────────────────
+// ─── Site Row ─────────────────────────────────────────────────────────────────
 const imgAuctionLogo =
-  "https://www.figma.com/api/mcp/asset/7630a23d-d117-4e4c-98ac-e12b8d2bc27b";
+  "https://www.figma.com/api/mcp/asset/7f521299-5e0e-41de-8d61-78a2e911a881";
 const imgGmarketLogo =
-  "https://www.figma.com/api/mcp/asset/77c5ab5b-ee6f-44a2-a0df-89cf5761036b";
+  "https://www.figma.com/api/mcp/asset/af1f774b-fbe8-44c2-9ffa-d1f77ced0eb9";
 const imgGmarketMask =
-  "https://www.figma.com/api/mcp/asset/7b2ccfb8-9020-4ab4-98ee-106ab1cbec56";
+  "https://www.figma.com/api/mcp/asset/c241c06d-ef28-4b90-8348-2c3086ff9a78";
 const imgArrowRight =
-  "https://www.figma.com/api/mcp/asset/0b51f222-8751-4f56-b312-7e7298759abd";
+  "https://www.figma.com/api/mcp/asset/94957e00-6853-4d4c-ae17-b3df3149bd73";
 
-// ─── 더보기 ──────────────────────────────────────────────────────────────────
+// ─── 더보기 ────────────────────────────────────────────────────────────────────
 const imgMorePlus =
-  "https://www.figma.com/api/mcp/asset/edc96da3-5300-44de-8d44-f9d429e521aa";
+  "https://www.figma.com/api/mcp/asset/d1ed4bca-1817-4cf5-a794-8f9ad938df99";
+const imgMorePlusFill =
+  "https://www.figma.com/api/mcp/asset/f0ecf388-150d-4b81-8ab9-4980c16e0e3e";
 
-// ─── GNB assets (Figma node 1766:522) ───────────────────────────────────────
-// Navigation Bar 배경 pill
-const imgGroup =
-  "https://www.figma.com/api/mcp/asset/70e1e77f-2803-4045-af02-0eb52c15fd00";
-// 홈 아이콘 — 로컬 이미지 사용
-const imgIcon32Home = "/images/Clip path group.png";
-// 마이페이지 아이콘 mask + fill
-const img207012 =
-  "https://www.figma.com/api/mcp/asset/0ad1a1cf-f62c-408e-8abd-880abbad93de";
-const img207013 =
-  "https://www.figma.com/api/mcp/asset/ff825ecb-49fb-494c-9d96-2746db5eaa1b";
-// 중앙 + 버튼 배경 + 아이콘
-const imgGroup1 =
-  "https://www.figma.com/api/mcp/asset/fa1ba21b-f30b-45fc-be19-33bf95eae920";
-const img207137 =
-  "https://www.figma.com/api/mcp/asset/382a4722-4d9b-4e7e-beec-182325e96c5a";
-// 홈 인디케이터
+// ─── GNB — 중앙 + 버튼 ────────────────────────────────────────────────────────
+const imgCenterBtn =
+  "https://www.figma.com/api/mcp/asset/8580c06b-9824-47bd-995a-b3c061c218f8";
+
+// ─── GNB — 홈 아이콘 ──────────────────────────────────────────────────────────
+const imgHome1503 =
+  "https://www.figma.com/api/mcp/asset/65b2e676-d501-4c12-82f7-175dfb219fbd";
+const imgHome276265 =
+  "https://www.figma.com/api/mcp/asset/d78ba725-9ce1-4cd6-90b8-1ee6a74d5b92";
+
+// ─── GNB — 쇼핑혜택 아이콘 ────────────────────────────────────────────────────
+const imgBenefitsVector =
+  "https://www.figma.com/api/mcp/asset/f22ef5b6-b65e-4786-97ca-99c727b3c021";
+const imgBenefits265 =
+  "https://www.figma.com/api/mcp/asset/ccd2c6d0-035d-4b52-8814-1c2cace0c82c";
+const imgBenefits2587 =
+  "https://www.figma.com/api/mcp/asset/bc282201-213b-461c-b13f-432922e23199";
+
+// ─── GNB — 마이페이지 아이콘 ──────────────────────────────────────────────────
+const imgMypage1702 =
+  "https://www.figma.com/api/mcp/asset/d3eb05d3-8c77-43f8-895f-85eada23958b";
+const imgMypage1703 =
+  "https://www.figma.com/api/mcp/asset/6e284223-661d-40d2-b9bf-ff9ae07e1c4e";
+const imgMypage2574 =
+  "https://www.figma.com/api/mcp/asset/5d382da1-5be7-4f0c-aa24-e09828d35047";
+const imgMypage240 =
+  "https://www.figma.com/api/mcp/asset/ae0a00c1-3d03-4c23-8a8c-d25c0b4039da";
+
+// ─── GNB — 전체메뉴 아이콘 ────────────────────────────────────────────────────
+const imgMenuVector1 =
+  "https://www.figma.com/api/mcp/asset/6f5e86fb-03a2-46b6-b864-2f4b4be2e806";
+const imgMenuVector2 =
+  "https://www.figma.com/api/mcp/asset/02b6fd82-f608-43a4-985c-26383701510e";
+
+// ─── GNB — 홈 인디케이터 ──────────────────────────────────────────────────────
 const imgBottom =
-  "https://www.figma.com/api/mcp/asset/e85884d5-dddd-43ae-9882-2c4f4ecf9453";
-// 전체메뉴 2×2 아이콘 (색1, 색2)
-const img276280 =
-  "https://www.figma.com/api/mcp/asset/51eb0348-8c43-4e97-811c-1675207dee1e";
-const img276283 =
-  "https://www.figma.com/api/mcp/asset/897f8293-5212-41a4-b705-5e4c7bb06f13";
-// 쇼핑혜택 아이콘
-const img1748 =
-  "https://www.figma.com/api/mcp/asset/9f17311d-7d4e-41ec-82cb-f9cb2890848f";
-const img265 =
-  "https://www.figma.com/api/mcp/asset/38827d2f-3d05-4809-89a0-e51f53500af9";
-const img2587 =
-  "https://www.figma.com/api/mcp/asset/6f914f01-02f6-4e38-b078-c40b800794e8";
+  "https://www.figma.com/api/mcp/asset/e94478eb-f392-428d-a6ef-2ac3ea6530b2";
 
-// ─── Helpers ─────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// Sub-components
+// ─────────────────────────────────────────────────────────────────────────────
+
 type SiteRowProps = {
   name: string;
   logoSrc: string;
@@ -95,9 +108,7 @@ function SiteRow({ name, logoSrc, maskSrc }: SiteRowProps) {
               />
             )}
           </div>
-          <p className="truncate text-[16px] font-bold leading-[1.4] text-[#222]">
-            {name}
-          </p>
+          <p className="truncate text-[16px] font-bold leading-[1.4] text-[#222]">{name}</p>
         </div>
         <div className="flex size-4 shrink-0 items-center justify-center">
           <img alt="" src={imgArrowRight} className="block size-4 max-w-none" />
@@ -107,236 +118,190 @@ function SiteRow({ name, logoSrc, maskSrc }: SiteRowProps) {
   );
 }
 
-// ─── GNB Component ───────────────────────────────────────────────────────────
-// Figma 노드 1766:522 : absolute, top:696px, w:390px, h:114px
-// 모든 자식 요소는 bottom/right 기준 절대좌표
-function Gnb() {
-  const maskStyle = (url: string, size: string, pos: string): React.CSSProperties => ({
-    WebkitMaskImage: `url('${url}')`,
-    maskImage: `url('${url}')`,
-    WebkitMaskSize: size,
-    maskSize: size,
-    WebkitMaskPosition: pos,
-    maskPosition: pos,
-    WebkitMaskRepeat: "no-repeat",
-    maskRepeat: "no-repeat",
-  });
-
+// ─── GNB 홈 아이콘 ────────────────────────────────────────────────────────────
+function IconHome() {
   return (
-    <div
-      className="absolute left-0 overflow-visible"
-      style={{ top: 696, width: 390, height: 114 }}
-    >
-      {/* Navigation Bar 배경 pill — 이미지가 컨테이너 바깥으로 확장(그림자 포함) */}
-      <div
-        className="absolute overflow-visible"
-        style={{ bottom: 24, right: 0, height: 72, width: 390 }}
-      >
-        <div
-          className="absolute"
-          style={{ top: "-18.06%", right: "-4.1%", bottom: "-26.39%", left: "-4.1%" }}
-        >
-          <img alt="" src={imgGroup} className="block size-full max-w-none" />
-        </div>
-      </div>
-
-      {/* 홈 아이콘 — 로컬 PNG */}
-      <div
-        className="absolute"
-        style={{ bottom: 56, right: 324, width: 24, height: 24 }}
-      >
-        <img alt="홈" src={imgIcon32Home} className="block size-full max-w-none object-contain" />
-      </div>
-
-      {/* 홈 레이블 */}
-      <p
-        className="absolute whitespace-nowrap text-[11px] leading-normal text-black"
-        style={{
-          bottom: 49, right: 367.75,
-          transform: "translateX(100%) translateY(100%)",
-          fontFamily: "Pretendard, sans-serif",
-        }}
-      >
-        홈
-      </p>
-
-      {/* 쇼핑혜택 아이콘 */}
-      {/* 패스 1748 */}
-      <div
-        className="absolute"
-        style={{
-          bottom: 54.89, right: 251.49, width: 28.98, height: 26.229,
-          ...maskStyle(img207012, "32px 32px", "-1.528px -2.886px"),
-        }}
-      >
-        <img alt="" src={img1748} className="absolute inset-0 block size-full max-w-none" />
-      </div>
-      {/* 선 265 */}
-      <div
-        className="absolute"
-        style={{
-          bottom: 64.86, right: 262.86, width: 6.288, height: 6.288,
-          ...maskStyle(img207012, "32px 32px", "-12.856px -12.856px"),
-        }}
-      >
-        <div className="absolute" style={{ inset: "-8.43%" }}>
-          <img alt="" src={img265} className="block size-full max-w-none" />
-        </div>
-      </div>
-      {/* 타원 2587 */}
-      <div
-        className="absolute"
-        style={{
-          bottom: 69.45, right: 267.45, width: 2.462, height: 2.462,
-          ...maskStyle(img207012, "32px 32px", "-12.087px -12.087px"),
-        }}
-      >
-        <div className="absolute" style={{ inset: "-30.46%" }}>
-          <img alt="" src={img2587} className="block size-full max-w-none" />
-        </div>
-      </div>
-      {/* 타원 2588 */}
-      <div
-        className="absolute"
-        style={{
-          bottom: 64.09, right: 262.09, width: 2.462, height: 2.462,
-          ...maskStyle(img207012, "32px 32px", "-17.45px -17.45px"),
-        }}
-      >
-        <div className="absolute" style={{ inset: "-30.46%" }}>
-          <img alt="" src={img2587} className="block size-full max-w-none" />
-        </div>
-      </div>
-
-      {/* 쇼핑혜택 레이블 */}
-      <p
-        className="absolute whitespace-nowrap text-[11px] leading-normal text-black"
-        style={{
-          bottom: 49, right: 312.01,
-          transform: "translateX(100%) translateY(100%)",
-          fontFamily: "Pretendard, sans-serif",
-        }}
-      >
-        쇼핑혜택
-      </p>
-
-      {/* 중앙 + 버튼 배경 */}
-      <div
-        className="absolute overflow-visible"
-        style={{ bottom: 58, right: 167, width: 56, height: 56 }}
-      >
-        <div
-          className="absolute"
-          style={{ top: "-17.86%", right: "-35.71%", bottom: "-53.57%", left: "-35.71%" }}
-        >
-          <img alt="" src={imgGroup1} className="block size-full max-w-none" />
-        </div>
-      </div>
-      {/* 중앙 + 아이콘 */}
-      <div
-        className="absolute"
-        style={{ bottom: 74, right: 182, width: 25, height: 24 }}
-      >
-        <img alt="" src={img207137} className="absolute inset-0 block size-full max-w-none" />
-      </div>
-
-      {/* 마이페이지 아이콘 */}
-      <div
-        className="absolute"
-        style={{
-          bottom: 56, right: 112, width: 24, height: 24,
-          ...maskStyle(img207012, "32px 32px", "-4px -4px"),
-        }}
-      >
+    <div className="relative h-6 w-full shrink-0">
+      <div className="absolute bottom-0 right-3 h-6 w-6">
         <div className="absolute" style={{ inset: "-4.17%" }}>
-          <img alt="" src={img207013} className="block size-full max-w-none" />
+          <img alt="" src={imgHome1503} className="block size-full max-w-none" />
         </div>
       </div>
-
-      {/* 마이페이지 레이블 */}
-      <p
-        className="absolute whitespace-nowrap text-[11px] leading-normal text-black"
-        style={{
-          bottom: 49, right: 174.77,
-          transform: "translateX(100%) translateY(100%)",
-          fontFamily: "Pretendard, sans-serif",
-        }}
-      >
-        마이페이지
-      </p>
-
-      {/* 전체메뉴 2×2 아이콘 */}
-      {/* top-left */}
-      <div className="absolute" style={{ bottom: 69, right: 55, width: 11, height: 11 }}>
-        <img alt="" src={img276280} className="absolute inset-0 block size-full max-w-none" />
-      </div>
-      {/* bottom-left */}
-      <div className="absolute" style={{ bottom: 56, right: 55, width: 11, height: 11 }}>
-        <img alt="" src={img276283} className="absolute inset-0 block size-full max-w-none" />
-      </div>
-      {/* top-right */}
-      <div className="absolute" style={{ bottom: 69, right: 42, width: 11, height: 11 }}>
-        <img alt="" src={img276280} className="absolute inset-0 block size-full max-w-none" />
-      </div>
-      {/* bottom-right */}
-      <div className="absolute" style={{ bottom: 56, right: 42, width: 11, height: 11 }}>
-        <img alt="" src={img276283} className="absolute inset-0 block size-full max-w-none" />
-      </div>
-
-      {/* 전체메뉴 레이블 */}
-      <p
-        className="absolute whitespace-nowrap text-[11px] leading-normal text-black"
-        style={{
-          bottom: 49, right: 100.01,
-          transform: "translateX(100%) translateY(100%)",
-          fontFamily: "Pretendard, sans-serif",
-        }}
-      >
-        전체메뉴
-      </p>
-
-      {/* 홈 인디케이터 */}
-      <div className="absolute bottom-0 left-0 h-6 w-full">
-        <img alt="" src={imgBottom} className="absolute inset-0 block size-full max-w-none" />
+      <div className="absolute h-[2px] w-[10px]" style={{ bottom: 12, right: 19 }}>
+        <img alt="" src={imgHome276265} className="absolute inset-0 block size-full max-w-none" />
       </div>
     </div>
   );
 }
 
-// ─── Main Component ──────────────────────────────────────────────────────────
+// ─── GNB 쇼핑혜택 아이콘 ──────────────────────────────────────────────────────
+function IconBenefits() {
+  return (
+    <div className="relative w-full shrink-0" style={{ height: 26.229 }}>
+      {/* 메인 패스 */}
+      <div
+        className="absolute"
+        style={{ bottom: 0.26, right: 9.02, width: 28.98, height: 26.229 }}
+      >
+        <img alt="" src={imgBenefitsVector} className="absolute inset-0 block size-full max-w-none" />
+      </div>
+      {/* 선 */}
+      <div
+        className="absolute"
+        style={{ bottom: 10.23, right: 20.38, width: 6.288, height: 6.288 }}
+      >
+        <div className="absolute" style={{ inset: "-8.43%" }}>
+          <img alt="" src={imgBenefits265} className="block size-full max-w-none" />
+        </div>
+      </div>
+      {/* 타원 위 */}
+      <div
+        className="absolute"
+        style={{ bottom: 14.83, right: 24.98, width: 2.462, height: 2.462 }}
+      >
+        <div className="absolute" style={{ inset: "-30.46%" }}>
+          <img alt="" src={imgBenefits2587} className="block size-full max-w-none" />
+        </div>
+      </div>
+      {/* 타원 아래 */}
+      <div
+        className="absolute"
+        style={{ bottom: 9.46, right: 19.62, width: 2.462, height: 2.462 }}
+      >
+        <div className="absolute" style={{ inset: "-30.46%" }}>
+          <img alt="" src={imgBenefits2587} className="block size-full max-w-none" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── GNB 마이페이지 아이콘 ────────────────────────────────────────────────────
+function IconMypage() {
+  return (
+    <div className="relative h-6 w-full shrink-0">
+      <div className="absolute size-3" style={{ bottom: 14.38, right: 27.07 }}>
+        <img alt="" src={imgMypage1702} className="absolute inset-0 block size-full max-w-none" />
+      </div>
+      <div className="absolute size-3" style={{ bottom: 14.38, right: 17.86 }}>
+        <img alt="" src={imgMypage1703} className="absolute inset-0 block size-full max-w-none" />
+      </div>
+      <div className="absolute size-6" style={{ bottom: 0, right: 12.23 }}>
+        <div className="absolute" style={{ inset: "-4.17%" }}>
+          <img alt="" src={imgMypage2574} className="block size-full max-w-none" />
+        </div>
+      </div>
+      <div className="absolute h-0" style={{ bottom: 12.5, right: 21.98, width: 4.5 }}>
+        <div className="absolute" style={{ inset: "-1px -22.22%" }}>
+          <img alt="" src={imgMypage240} className="block size-full max-w-none" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── GNB 전체메뉴 아이콘 ──────────────────────────────────────────────────────
+function IconMenu() {
+  return (
+    <div className="relative h-6 w-full shrink-0">
+      {/* 상단 좌 */}
+      <div className="absolute size-[11px]" style={{ bottom: 13, right: 20.99 }}>
+        <img alt="" src={imgMenuVector1} className="absolute inset-0 block size-full max-w-none" />
+      </div>
+      <div className="absolute size-[9px]" style={{ bottom: 14, right: 21.99 }}>
+        <div className="absolute" style={{ inset: "-11.11%" }}>
+          <img alt="" src={imgMenuVector2} className="block size-full max-w-none" />
+        </div>
+      </div>
+      {/* 상단 우 */}
+      <div className="absolute size-[11px]" style={{ bottom: 13, right: 7.99 }}>
+        <img alt="" src={imgMenuVector1} className="absolute inset-0 block size-full max-w-none" />
+      </div>
+      <div className="absolute size-[9px]" style={{ bottom: 14, right: 8.99 }}>
+        <div className="absolute" style={{ inset: "-11.11%" }}>
+          <img alt="" src={imgMenuVector2} className="block size-full max-w-none" />
+        </div>
+      </div>
+      {/* 하단 좌 */}
+      <div className="absolute size-[11px]" style={{ bottom: 0, right: 20.99 }}>
+        <img alt="" src={imgMenuVector1} className="absolute inset-0 block size-full max-w-none" />
+      </div>
+      <div className="absolute size-[9px]" style={{ bottom: 1, right: 21.99 }}>
+        <div className="absolute" style={{ inset: "-11.11%" }}>
+          <img alt="" src={imgMenuVector2} className="block size-full max-w-none" />
+        </div>
+      </div>
+      {/* 하단 우 */}
+      <div className="absolute size-[11px]" style={{ bottom: 0, right: 7.99 }}>
+        <img alt="" src={imgMenuVector1} className="absolute inset-0 block size-full max-w-none" />
+      </div>
+      <div className="absolute size-[9px]" style={{ bottom: 1, right: 8.99 }}>
+        <div className="absolute" style={{ inset: "-11.11%" }}>
+          <img alt="" src={imgMenuVector2} className="block size-full max-w-none" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Main Component
+// ─────────────────────────────────────────────────────────────────────────────
 export function SimpleLoginRegistered() {
   return (
     <div
-      className="relative mx-auto bg-[#f6f7fb]"
-      style={{ width: 390, height: 844, fontFamily: "Pretendard, sans-serif", overflow: "hidden" }}
+      className="flex min-h-screen w-full flex-col items-start gap-8 bg-[#f6f7fb]"
+      style={{ fontFamily: "Pretendard, sans-serif" }}
     >
       {/* ── Status Bar ── */}
-      <div className="pointer-events-none absolute left-0 top-0 h-[41px] w-full">
+      <div className="relative h-[41px] w-full shrink-0">
         <img
           alt=""
-          src={imgStatusBar}
-          className="absolute inset-0 block h-full w-full max-w-none object-cover"
+          src={imgTop}
+          className="absolute inset-0 block size-full max-w-none object-cover"
         />
       </div>
 
       {/* ── Navigation Header ── */}
-      <div className="absolute left-0 top-[43px] flex h-[48px] w-full items-center justify-between px-4">
-        <Link
-          href="/"
-          aria-label="뒤로 가기"
-          className="flex size-8 items-center justify-center"
-        >
-          <img alt="" src={imgBackIcon} className="block h-[17px] w-[21px] max-w-none" />
+      <div className="flex h-[48px] w-full shrink-0 items-center justify-between px-4">
+        {/* 뒤로 가기 */}
+        <Link href="/" aria-label="뒤로 가기" className="flex size-8 items-center justify-center">
+          {/* Figma masked back icon */}
+          <div
+            className="relative shrink-0"
+            style={{ width: 20.425, height: 16.781 }}
+          >
+            <div
+              className="absolute inset-0"
+              style={{
+                WebkitMaskImage: `url('${imgIcon32GnbBack}')`,
+                maskImage: `url('${imgIcon32GnbBack}')`,
+                WebkitMaskSize: "32px 32px",
+                maskSize: "32px 32px",
+                WebkitMaskPosition: "-5.786px -7.609px",
+                maskPosition: "-5.786px -7.609px",
+                WebkitMaskRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+              }}
+            >
+              <div className="absolute" style={{ inset: "-5.96% -4.9%" }}>
+                <img alt="" src={imgIcon32GnbBack1} className="block size-full max-w-none" />
+              </div>
+            </div>
+          </div>
         </Link>
+
         <p className="text-[18px] font-bold leading-normal text-[#222]">간편로그인</p>
+
         <button type="button" aria-label="검색" className="flex size-8 items-center justify-center">
-          <img alt="" src={imgSearch} className="block size-8 max-w-none" />
+          <img alt="" src={imgIcon32GnbSearch} className="absolute block size-8 max-w-none" />
         </button>
       </div>
 
-      {/* ── Tabs ── */}
-      <div className="absolute left-0 top-[115px] w-full px-6">
-        <div className="flex items-center gap-5 pb-4">
+      {/* ── Tabs + 계정 목록 ── */}
+      <div className="flex w-full shrink-0 flex-col items-start px-6">
+        {/* 탭 */}
+        <div className="flex w-full items-center gap-5 pb-4">
           <span className="text-[16px] font-bold leading-normal text-[#959595]">전체 사이트</span>
           <div className="relative">
             <span className="text-[16px] font-bold leading-normal text-[#222]">등록된 계정</span>
@@ -345,22 +310,97 @@ export function SimpleLoginRegistered() {
         </div>
 
         {/* 계정 목록 */}
-        <div className="flex w-full max-w-[342px] flex-col gap-4 pb-40">
+        <div className="flex w-full flex-col gap-4">
           <SiteRow name="옥션" logoSrc={imgAuctionLogo} />
           <SiteRow name="지마켓" logoSrc={imgGmarketLogo} maskSrc={imgGmarketMask} />
           <SiteRow name="옥션" logoSrc={imgAuctionLogo} />
           <SiteRow name="옥션" logoSrc={imgAuctionLogo} />
           <SiteRow name="옥션" logoSrc={imgAuctionLogo} />
 
+          {/* 더보기 */}
           <button type="button" className="flex w-full items-center justify-center gap-1 py-2">
-            <img alt="" src={imgMorePlus} className="h-[10px] w-[10px]" />
+            <div
+              className="relative shrink-0"
+              style={{ width: 10.067, height: 9.828 }}
+            >
+              <div
+                className="absolute inset-0"
+                style={{
+                  WebkitMaskImage: `url('${imgMorePlus}')`,
+                  maskImage: `url('${imgMorePlus}')`,
+                  WebkitMaskSize: "18px 18px",
+                  maskSize: "18px 18px",
+                  WebkitMaskPosition: "-3.966px -4.086px",
+                  maskPosition: "-3.966px -4.086px",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskRepeat: "no-repeat",
+                }}
+              >
+                <img alt="" src={imgMorePlusFill} className="absolute inset-0 block size-full max-w-none" />
+              </div>
+            </div>
             <span className="text-[14px] font-medium leading-normal text-[#2d6af6]">더보기</span>
           </button>
         </div>
       </div>
 
-      {/* ── GNB (Figma 1766:522) ── */}
-      <Gnb />
+      {/* ── GNB (Figma 1802:360 반응형) ── */}
+      <div className="mt-auto flex w-full shrink-0 flex-col items-start">
+
+        {/* 중앙 + 버튼 */}
+        <div className="flex w-full items-center justify-center px-[163px]">
+          <div className="relative size-[56px]">
+            <img
+              alt="추가"
+              src={imgCenterBtn}
+              className="absolute inset-0 block size-full max-w-none"
+            />
+          </div>
+        </div>
+
+        {/* 네비게이션 바 */}
+        <div className="flex w-full flex-col items-start bg-white px-[22px] py-3">
+          <div className="flex w-full items-center justify-between">
+
+            {/* 홈 */}
+            <div className="flex w-12 shrink-0 flex-col items-center gap-[7px]">
+              <IconHome />
+              <p className="w-full text-center text-[11px] leading-normal text-black">홈</p>
+            </div>
+
+            {/* 쇼핑혜택 */}
+            <div className="flex w-12 shrink-0 flex-col items-center gap-[6px]">
+              <IconBenefits />
+              <p className="w-full text-center text-[11px] leading-normal text-black">쇼핑혜택</p>
+            </div>
+
+            {/* 중앙 빈 공간 (+ 버튼 자리) */}
+            <div className="h-[13px] w-12 shrink-0" />
+
+            {/* 마이페이지 */}
+            <div className="flex w-12 shrink-0 flex-col items-center gap-[7px]">
+              <IconMypage />
+              <p className="w-full text-[11px] leading-normal text-black">마이페이지</p>
+            </div>
+
+            {/* 전체메뉴 */}
+            <div className="flex w-12 shrink-0 flex-col items-center gap-[7px]">
+              <IconMenu />
+              <p className="w-full text-center text-[11px] leading-normal text-black">전체메뉴</p>
+            </div>
+
+          </div>
+        </div>
+
+        {/* 홈 인디케이터 */}
+        <div className="relative h-6 w-full shrink-0">
+          <img
+            alt=""
+            src={imgBottom}
+            className="absolute inset-0 block size-full max-w-none"
+          />
+        </div>
+      </div>
     </div>
   );
 }
