@@ -177,21 +177,35 @@ function IconBenefits() {
 }
 
 // ─── GNB 마이페이지 아이콘 ────────────────────────────────────────────────────
+// Figma: 패스1702(3×3), 패스1703(3×3), 타원2574(24×24), 선240(4.5×0)
 function IconMypage() {
   return (
     <div className="relative h-6 w-full shrink-0">
-      <div className="absolute size-3" style={{ bottom: 14.38, right: 27.07 }}>
+      {/* 패스 1702 — 왼쪽 점 (3×3px) */}
+      <div
+        className="absolute"
+        style={{ bottom: 14.38, right: 27.07, width: 3, height: 3 }}
+      >
         <img alt="" src={imgMypage1702} className="absolute inset-0 block size-full max-w-none" />
       </div>
-      <div className="absolute size-3" style={{ bottom: 14.38, right: 17.86 }}>
+      {/* 패스 1703 — 오른쪽 점 (3×3px) */}
+      <div
+        className="absolute"
+        style={{ bottom: 14.38, right: 17.86, width: 3, height: 3 }}
+      >
         <img alt="" src={imgMypage1703} className="absolute inset-0 block size-full max-w-none" />
       </div>
+      {/* 타원 2574 — 얼굴 원형 (24×24px) */}
       <div className="absolute size-6" style={{ bottom: 0, right: 12.23 }}>
         <div className="absolute" style={{ inset: "-4.17%" }}>
           <img alt="" src={imgMypage2574} className="block size-full max-w-none" />
         </div>
       </div>
-      <div className="absolute h-0" style={{ bottom: 12.5, right: 21.98, width: 4.5 }}>
+      {/* 선 240 — 입 (4.5×0px) */}
+      <div
+        className="absolute"
+        style={{ bottom: 12.5, right: 21.98, width: 4.5, height: 0 }}
+      >
         <div className="absolute" style={{ inset: "-1px -22.22%" }}>
           <img alt="" src={imgMypage240} className="block size-full max-w-none" />
         </div>
@@ -345,21 +359,32 @@ export function SimpleLoginRegistered() {
       </div>
 
       {/* ── GNB (Figma 1802:360 반응형) ── */}
+      {/*
+        Figma 구조 (1803:643):
+          flex-col items-start w-full shrink-0
+            ├─ icon_plus (1803:648): flex items-center justify-center w-full → 56×56 버튼 가운데
+            ├─ gnb bar  (1803:634): bg-white px-[22px] py-[12px]
+            └─ Bottom indicator
+      */}
       <div className="mt-auto flex w-full shrink-0 flex-col items-start">
 
-        {/* 중앙 + 버튼 */}
-        <div className="flex w-full items-center justify-center px-[163px]">
-          <div className="relative size-[56px]">
+        {/* icon_plus — GNB 바 위에 절반 겹치도록 올림 (Figma 1803:648) */}
+        {/* p-3(12px) 로 그림자 공간 확보, marginBottom은 절반(28) + 패딩(12) = -40 */}
+        <div
+          className="relative z-10 flex w-full shrink-0 items-center justify-center overflow-visible p-3"
+          style={{ marginBottom: -40 }}
+        >
+          <div className="relative size-[56px] overflow-visible">
             <img
               alt="추가"
               src={imgCenterBtn}
-              className="absolute inset-0 block size-full max-w-none"
+              className="absolute inset-0 block size-full max-w-none drop-shadow-lg"
             />
           </div>
         </div>
 
-        {/* 네비게이션 바 */}
-        <div className="flex w-full flex-col items-start bg-white px-[22px] py-3">
+        {/* 네비게이션 바 — pt로 + 버튼 겹침 + 그림자 공간 확보 */}
+        <div className="flex w-full flex-col items-start bg-white px-[22px] pb-3 pt-12">
           <div className="flex w-full items-center justify-between">
 
             {/* 홈 */}

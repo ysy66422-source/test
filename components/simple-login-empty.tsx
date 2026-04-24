@@ -76,12 +76,21 @@ export function SimpleLoginEmpty() {
           {/* Empty-state Card */}
           <div className="w-full rounded-[16px] bg-white py-[34px]">
             <div className="flex flex-col items-center gap-[7px]">
-              {/* 일러스트 — 페이드인 */}
-              <img
-                alt="등록된 계정 없음"
-                src={imgBlockLayer}
-                className="block h-[122px] w-[122px] max-w-none animate-fade-in opacity-0"
-              />
+              {/* 일러스트 — 래퍼: 페이드인 0.8s → 유지 3s → 반복 / 이미지: Y축 회전 */}
+              <div
+                className="animate-fade-in-hold opacity-0"
+                style={{ perspective: "600px" }}
+              >
+                <img
+                  alt="등록된 계정 없음"
+                  src={imgBlockLayer}
+                  className="block h-[122px] w-[122px] max-w-none"
+                  style={{
+                    animation: "spinY 3s linear infinite",
+                    transformOrigin: "center center",
+                  }}
+                />
+              </div>
 
               {/* 안내 텍스트 */}
               <p className="text-center text-[16px] font-normal leading-[1.4] text-[#222]">
