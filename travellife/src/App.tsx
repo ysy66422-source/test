@@ -41,7 +41,11 @@ const App = () => {
         return (
           <CountryDetailPage
             countryId={view.countryId}
-            onBack={() => setView({ name: view.from })}
+            onBack={() =>
+              setView(
+                view.from === 'search' ? { name: 'search' } : { name: 'main' },
+              )
+            }
           />
         )
       default:
