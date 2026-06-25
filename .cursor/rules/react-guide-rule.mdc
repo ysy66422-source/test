@@ -1,0 +1,123 @@
+---
+description: 
+alwaysApply: true
+---
+
+코딩 가이드 
+아래 내용을 기반으로 프로젝트 생성하고 작업 진행해
+——————————————————————————————————————
+1. 공통 코딩 규칙
+포함 내용:
+* 모든 코드 블록에 왜(why) 중심 주석 작성
+* TypeScript strict typing 사용
+* Props / API 응답 / Store 타입은 interface 사용
+* 날짜 처리는 dayjs
+* lodash는 개별 import 사용
+* 조건부 클래스는 clsx + tailwind-merge
+* Prettier 규칙 준수
+금지:
+* inline style / <style> 태그
+* any
+* 빈 catch 문
+* var
+* 운영 코드의 console.log
+
+
+2. Tailwind 스타일 규칙
+포함 내용:
+* 스타일은 Tailwind만 사용
+* tailwind.config.js 토큰 사용
+* 반응형 breakpoint 사용
+* 프로젝트 컬러 팔레트 사용
+금지:
+* <style> 태그
+* max-w-*
+* block 요소 기본 w-full
+* text-[14px], p-[20px] 같은 arbitrary value
+* 14.5 같은 소수점 값
+* inline style
+
+3. 프로젝트 폴더 구조
+sample_project/
+├── .cursor/rules/              # Cursor AI rule files (.mdc)
+├── .vscode/                    # VSCode/Cursor IDE settings
+├── env/                        # Environment variables (.env, .env.development, .env.production)
+│
+├── src/
+│   ├── assets/                 # Static assets
+│   │
+│   ├── components/             # Shared UI components
+│   │
+│   ├── hooks/                  # Reusable custom hooks (useMediaQuery, useMapController, useVisualViewport)
+│   │
+│   ├── interface/              # SKT native app JavaScript bridge layer
+│   │
+│   ├── mocks/                  # Mock/fixture data for development
+│   │
+│   ├── pages/                  # Route-level page components
+│   │
+│   ├── services/               # API layer & data fetching
+│   │
+│   ├── store/                  # Zustand global state stores (auth, benefit, card, fuel, region)
+│   │
+│   ├── styles/                 # Global SCSS & theme utilities
+│   │
+│   ├── typing/                 # App-level TypeScript type definitions
+│   │
+│   ├── types/                  # Third-party library type declarations (.d.ts)
+│   │
+│   └── utils/                  # General utility functions
+│
+├── .prettierrc                 # Prettier config
+├── eslint.config.js            # ESLint flat config
+├── index.html                  # Vite HTML entry point
+├── package.json                # Dependencies & scripts
+├── tailwind.config.js          # Tailwind CSS custom theme config
+├── tsconfig.json               # TypeScript config (root)
+├── tsconfig.app.json           # TypeScript config (app)
+└── vite.config.ts              # Vite build config
+
+레이어	경로	역할
+Entry	main.tsx → App.tsx → routes.tsx	앱 진입, Provider 래핑, 라우트 정의
+Pages	src/pages/	라우트 단위 페이지 (도메인별 하위 폴더)
+Components	src/components/	공유 UI 컴포넌트 (도메인별 하위 폴더)
+Services	src/services/api/	HTTP 클라이언트(ky), 도메인별 API 함수
+Query Hooks	src/services/hooks/	TanStack Query 키 팩토리 + 커스텀 데이터 훅
+Store	src/store/	Zustand 글로벌 상태 (auth, UI filters)
+Hooks	src/hooks/	범용 커스텀 훅 (미디어쿼리, 뷰포트, 맵)
+Types	src/typing/ + src/types/	앱 타입 + 서드파티 타입 선언
+Assets	src/assets/	SVG 컴포넌트, 이미지, Lottie, JSON
+Interface	src/interface/	SKT 네이티브 앱 JS 브릿지
+Styles	src/styles/	글로벌 SCSS, 테마 유틸
+Config	root *.config.*	Vite, Tailwind, TypeScript, ESLint, Prettier
+
+
+4. React 컴포넌트 규칙
+포함 내용:
+* 함수형 컴포넌트만 사용
+* props는 interface 정의
+* 글로벌 상태는 Zustand
+* 페이지 단위 lazy loading
+* react-error-boundary 사용
+금지:
+* 클래스 컴포넌트
+* 서버 데이터 Zustand 저장
+* 깊은 삼항연산자 JSX
+* 직접 state 변경
+* index key 사용
+
+5. Figma 에셋 추출 규칙
+Figma 에셋 추출 규칙
+포함 내용:
+* PNG 형식만 사용
+* 항상 3x 배율 export
+* src/assets/ 저장
+* 파일명은 kebab-case
+금지:
+* 1x / 2x export
+
+6.
+- 이미지 url 사용 금지
+-  인라인 스타일, 소수점 사용 금지
+- tailwind 스타일 규칙 위반
+- 기타 스타일 사용법 미준수
